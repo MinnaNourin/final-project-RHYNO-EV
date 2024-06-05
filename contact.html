@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Protest+Riot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+  }
+ 
+  .container{
+    width: 70%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  .container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container .content .left-side{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+  }
+  .content .left-side::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #afafb6;
+  }
+  .content .left-side .details{
+    margin: 14px;
+    text-align: center;
+  }
+  .content .left-side .details i{
+    font-size: 30px;
+    color: #202020;
+    margin-bottom: 10px;
+  }
+  .content .left-side .details .topic{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .content .left-side .details .text-one,
+  .content .left-side .details .text-two{
+    font-size: 14px;
+    color: #afafb6;
+  }
+  .container .content .right-side{
+    width: 75%;
+    margin-left: 75px;
+  }
+  .content .right-side .topic-text{
+    font-size: 23px;
+    font-weight: 600;
+    color: #202020;
+  }
+  .right-side .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+  }
+  .right-side .input-box input,
+  .right-side .input-box textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #F0F1F8;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+  }
+  .right-side .message-box{
+    min-height: 110px;
+  }
+  .right-side .input-box textarea{
+    padding-top: 6px;
+  }
+  .right-side .button{
+    display: inline-block;
+    margin-top: 12px;
+  }
+  .right-side .button input[type="button"]{
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #202020;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button input[type="button"]:hover{
+    background: #202020;
+  }
+  @media (max-width: 950px) {
+    .container{
+      width: 90%;
+      padding: 30px 40px 40px 35px ;
+    }
+    .container .content .right-side{
+     width: 75%;
+     margin-left: 55px;
+  }
+  }
+  @media (max-width: 820px) {
+    .container{
+      margin: 40px 0;
+      height: 100%;
+    }
+    .container .content{
+      flex-direction: column-reverse;
+    }
+   .container .content .left-side{
+     width: 100%;
+     flex-direction: row;
+     margin-top: 40px;
+     justify-content: center;
+     flex-wrap: wrap;
+   }
+   .container .content .left-side::before{
+     display: none;
+   }
+   .container .content .right-side{
+     width: 100%;
+     margin-left: 0;
+   }
+}
+.dropbtn {
+  background-color: #131313;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: #131313;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+button:hover {
+            color:#f9ed32 ;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="Rhyno Logo .png" alt="Error" width="350" height="120" >
+        <div class="navigation">
+
+            <ul>
+                <i class="fa-solid fa-xmark"></i>
+
+        <i class="fa-solid fa-bars"></i>
+                <li><a href="index.html" target="_parent">Home</a></li>
+                <li><a href="About.html" target="#content">About us</a></li>
+                <div class="dropdown">
+                  <button class="dropbtn" style="margin-right: 50px;font-size: 20px;">Products</button>
+                  <div class="dropdown-content" style="margin-right: 50px;">
+                    <a href="products.html" style="color: #131313;font-family: 'lato',sans-serif;font-weight: bold;">All</a>
+                    <a href="SEO3Lite.html" style="color: #131313;font-family: 'lato',sans-serif;font-weight: bold;">SE03 Lite</a>
+                    <a href="SE03.html" style="color: #131313;font-family: 'lato',sans-serif;font-weight: bold;">SE03</a>
+                    <a href="SE03Max.html" style="color: #131313;font-family: 'lato',sans-serif;font-weight: bold;">SE03 Max</a>
+                  </div>
+                </div></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="Prebook.html">Pre-book now</a></li>
+                <li><a href="https://www.instagram.com/rhyno.in?igsh=MXFwb2VkcnN1bWlhNw==" target="_blank"><i class="bi bi-instagram" style="font-size: 30px;"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank"><i class="bi bi-linkedin" style="font-size: 30px;"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="ContactUs">
+        <div class="container" style="margin-top: 50px;">
+            <div class="content">
+              <div class="left-side">
+                <div class="address details">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="topic" style="font-family: 'lato',sans-serif;font-weight: bolder;">Address</div>
+                  <div class="text-one" style="color: #202020;"> Rhyno Wheels Private limited,
+                    Near UG hostel gate #2, Behind PDEU,
+                    Raisan, Gandhinagar, Gujarat, India.</div>
+                
+                </div>
+                <div class="phone details">
+                  <i class="fas fa-phone-alt"></i>
+                  <div class="topic" style="font-family: 'lato',sans-serif;font-weight: bold;">Phone</div>
+                  <div class="text-one"> <a href="tel:+91-9023987528" style="color: #202020;text-decoration: none;" >+91-9023987528</a></div>
+                
+                </div>
+                <div class="email details">
+                  <i class="fas fa-envelope"></i>
+                  <div class="topic" style="font-family: 'lato',sans-serif;font-weight: bolder;">Email</div>
+                  <div class="text-one"><a href="mailto:Mail: info@rhyno.in" style="color: #202020;text-decoration: none;">info@rhyno.in</a></div>
+                
+                </div>
+              </div>
+              <div class="right-side">
+                <div class="topic-text" style="font-family: 'lato',sans-serif;">Get touch with us!</div>
+                <p>If you want to know more about Rhyno EV please contact us.</p>
+              <form action="#">
+                <div class="input-box">
+                  <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="input-box">
+                  <input type="text" placeholder="Enter your email">
+                </div>
+                <div class="input-box message-box">
+                  
+                </div>
+                <div class="button">
+                  <input type="button" value="Send Now" >
+                </div>
+                <img src="contact.jpeg" style="margin-top: -100px;margin-left:300px ;box-shadow: 0px 0px 2px 2px grey;">
+              </form>
+            </div>
+            </div>
+          
+          </div>
+    </section>    
+    <div>
+        <footer>
+            <div class="footer" style="height: 70px;">
+                <ul>
+                    <li><a href="#" style="font-family: 'poppins',sans-serif;">Privacy policy</a></li>
+                    <li><a href="#" style="font-family: 'poppins',sans-serif;">Refund policy</a></li>
+                    <li><a href="#" style="font-family: 'poppins',sans-serif;">Website policy</a></li>
+                    <li><a href="Contact.html" target="_parent" style="font-family: 'poppins',sans-serif;">Contact us</a></li>
+                    <li><a href="Products.html" target="_parent" style="font-family: 'poppins',sans-serif;">Products</a></li>
+                    <li><a href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank" style="font-family: 'poppins',sans-serif;">Career</a></li>
+                    <li><a href="Rentals.html" style="font-family: 'poppins',sans-serif;">Rentals</a></li>
+                    <li><a href="https://www.instagram.com/rhyno.in?igsh=MXFwb2VkcnN1bWlhNw==" target="_blank"><i class="bi bi-instagram" style="font-size: 30px;"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank"><i class="bi bi-linkedin" style="font-size: 30px;"></i></a></li>
+                </ul>
+            </div>
+            <div class="fab-wrapper">
+              <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
+              <label class="fab" for="fabCheckbox">
+                <span class="fab-dots fab-dots-1"></span>
+                <span class="fab-dots fab-dots-2"></span>
+                <span class="fab-dots fab-dots-3"></span>
+              </label>
+              <div class="fab-wheel">
+                
+                <a class="fab-action fab-action-2" href="https://www.instagram.com/rhyno.in?igsh=MXFwb2VkcnN1bWlhNw==" target="_blank">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                    <a class="fab-action fab-action-3" href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank">
+                      <i class="bi bi-linkedin"></i>
+                </a>
+                    <a class="fab-action fab-action-4" href="Prebook.html">
+                      <i class="bi bi-cart-dash-fill"></i>
+                </a>
+              </div>
+            </div>
+        </footer>
+    </div>
+    
+    
+</body>
+</html>
